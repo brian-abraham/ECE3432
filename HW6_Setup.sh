@@ -1,7 +1,7 @@
-#!/bin/zsh
+#!/bin/sh
 
 cd ~/
-source /opt/ros/melodic/setup.zsh
+source /opt/ros/melodic/setup.bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
 catkin_make
@@ -11,7 +11,7 @@ rosdep install joy
 catkin_create_pkg racecar std_msgs rospy roscpp
 cd ~/catkin_ws
 catkin_make
-. ~/catkin_ws/devel/setup.zsh
+. ~/catkin_ws/devel/setup.bash
 roscd racecar
 mkdir scripts
 cd scripts
