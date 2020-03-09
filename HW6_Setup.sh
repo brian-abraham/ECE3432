@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cd ~/
 source /opt/ros/melodic/setup.bash
