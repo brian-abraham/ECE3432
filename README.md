@@ -1,23 +1,32 @@
-## Racecar project
-This can control the car over wifi using ROS
+## ECE3432 Team 4
+This codebase is for controlling the car over WiFi using ROS
+
 ### Setup workspace and package
 ```
 ./HW5_Setup.sh
 ```
+
 ### To Run Program
-On talker PC run 
+On the talker machine run:
 ```
 roscore
 ```
 
-Then in another terminal run
+Then in another terminal on the talker machine run:
 ```
-./talkerPi.py
+./talker.py
+```
+Determine the IP of the talker machine by using `ifconfig`.
+
+On the listener machine, run:
+```
+export ROS_MASTER_URI:<talkerIP>:11311
+export ROS_IP:<talkerIP>
+./listener.py
 ```
 
-On listener PC run
-```
-export ROS_MASTER_URI:<hostIP>:11311
-export ROS_IP:<clientIP>
-./listenerPi.py
-```
+### Contributors
+  - Brian Abraham
+  - Matthew Gilrow
+  - Alex Kushlan
+  - Rodrigo Medeiros
